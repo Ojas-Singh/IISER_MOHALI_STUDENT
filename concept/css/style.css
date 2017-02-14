@@ -8,9 +8,10 @@ body
   -ms-font-smoothing:antialiased;
   font-smoothing:antialiased;
   background:rgba(18,18,26,1);
-  background-image:url('http://artlantis-media.ru/static/img/0000/0002/7260/27260842.qvpm616fga.png');
+  background-image:url('http://www.shunvmall.com/data/out/80/47510751-flat-wallpaper.png');
   background-blend-mode:overlay;
-  background-size:15%;
+  background-size:100%;
+  width: 100%;
 }
 ::-webkit-scrollbar
 {
@@ -22,10 +23,13 @@ body
 #home
 {
   color:#aaaaaf;
-  width:100%;
+  width:90%;
   height:100%;
   position:relative;
-  padding:100px;
+  padding-left: 150px;
+  padding-right: -100px;
+  padding-top: 100px;
+  padding-bottom: 0px;
   display:block;
   transition:transform 0.5s ease-in-out;
 }
@@ -55,11 +59,11 @@ body
 #home .logo
 {
   width:200px;
-  height:200px;
-  border-radius:50%;
-  background-image:url("http://twths.org/wp/wp-content/uploads/2015/12/coldplay-a-head-full-of-dreams-album-art-560x560.jpg");
+  height:224px;
+  border-radius:0%;
+  background-image:url("https://upload.wikimedia.org/wikipedia/en/1/17/IISER_Mohali_Logo_2014.png");
   background-size:100%;
-  background-position:50% 50%;
+  background-position:100% 100%;
   box-shadow:0px 0px 20px -10px rgba(0,0,0,0.5);
 }
 #home h2
@@ -139,8 +143,8 @@ body
   background-size:100%;
   background-position:50% 50%;
   background-blend-mode:overlay;
-  background-image:url("https://emersonkeeling.files.wordpress.com/2015/12/ahfod.gif");
-  background-color:rgba(43,26,119,0.25);
+  background-image:url("");
+  background-color:rgba(255,255,255,0.25);
   transition:all 0.2s;
   -webkit-filter:blur(3px);
   -moz-filter:blur(3px);
@@ -417,7 +421,8 @@ nav.main>.tab:hover:after
 {
   font-size:0.9em;
   position:relative;
-  margin-top:200px;
+  margin-top:0px;
+  padding-right: 0px;
   width:100%;
   height:70px;
   text-align:center;
