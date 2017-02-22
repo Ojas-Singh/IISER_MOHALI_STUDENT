@@ -58,11 +58,27 @@
           <span class='entypo-instagrem'></span>
         </a>
       </div>
-      <form>
+      <?php
+if ($_POST["email"]<>'') {
+    $ToEmail = 'singhojas007@gmail.com';
+    $EmailSubject = 'Site contact form';
+    $mailheader = "From: ".$_POST["email"]."\r\n";
+    $mailheader .= "Reply-To: ".$_POST["email"]."\r\n";
+    $mailheader .= "Content-type: text/html; charset=iso-8859-1\r\n";
+    $MESSAGE_BODY = "Subject: ".$_POST["Subject"]."";
+    $MESSAGE_BODY .= "Email: ".$_POST["email"]."";
+    $MESSAGE_BODY .= "Message: ".nl2br($_POST["Message"])."";
+    mail($ToEmail, $EmailSubject, $MESSAGE_BODY, $mailheader) or die ("Failure");
+?>
+Your message was sent
+<?php
+} else {
+?>
+      <form action="index.php" method="post">
         <p>Get in Contact</p>
-        <input placeholder='Email' type='email'>
-        <input placeholder='Subject' type='text'>
-        <textarea placeholder='Message' rows='4'></textarea>
+        <input placeholder='Email' type='email' id="email">
+        <input placeholder='Subject' type='text' id="Subject">
+        <textarea placeholder='Message' rows='4' id="Message"></textarea>
         <input placeholder='Send' type='submit'>
       </form>
       <p>other way</p>

@@ -2,19 +2,55 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Pango - Intro Animation</title>
+  <title>Intro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css'>
 <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lato:300'>
 
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Palanquin:400,100,200,300'>
       <link rel="stylesheet" href="css/style.css">
 
-
+      <script type="text/javascript">
+        function gotosearch(){
+          var search = document.getElementById('input').value;
+          window.location = "https://www.google.co.in/search?q="+search;
+          return true;
+        }
+    </script>
 </head>
 
 <body>
+
+  <form id="content" method="post" action="index.php">
+   <input type="text" name="input" class="input" id="input">
+   <button type="reset" class="search"></button>
+
+  </form>
+
+  <?php
+  include "redirect.php"
+  ?>
+  <div id="circularMenu" class="circular-menu">
+
+  <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+    <i class="fa fa-plus"></i>
+  </a>
+
+  <menu class="items-wrapper">
+    <a href="https://iisermohali.ac.in/src/login.php" class="menu-item fa fa-envelope"></a>
+    <a href="http://14.139.227.197/" class="menu-item fa fa-book"></a>
+    <a href="../../../moodle" class="menu-item fa fa-graduation-cap"></a>
+    <a href="http://iisermohali.ac.in" class="menu-item fa fa-home"></a>
+  </menu>
+
+</div>
+
    <section id="intro" class="section section--intro">
   <!-- mousemove event layer (for background effect) -->
   <div class="mouse-tracker-layer"></div>
@@ -96,8 +132,11 @@
 
   <div class="bg-lines-wrapper"></div>
 </section>
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
 
     <script src="js/index.js"></script>
 
